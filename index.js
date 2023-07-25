@@ -8,26 +8,19 @@ const currencyList =  document.querySelector('.options')
 async function getCurrency(){
     let response = await fetch ('https://www.cbr-xml-daily.ru/daily_json.js')
     let content = await response.json()
-    console.log(content)
+    
 
-    let key
+    let key 
 
     for (key in content){
         
         currencyList.innerHTML += `<li class="option">
-        <span class="option-text">${content[key].ID} - ${content[key].name} </span>
+        <span class="option-text">${content[key]} - ${content[key]} </span>
       </li> `
-
-        //  console.log(content[key])
     }
-
+    console.log(content[key])
 }
-
 getCurrency()
-
-
-
-
 
 
 selectBtn.addEventListener('click', ()=> optionMenu.classList.toggle("active"));
