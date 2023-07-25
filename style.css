@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e3f2fd;
+}
+.select-menu {
+  width: 380px;
+  margin: 150px auto;
+}
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.chevron-down {
+  width: 10px;
+  height: 10px;
+  transition: 0.3s;
+}
+.select-menu.active .chevron-down {
+  transform: rotate(-180deg);
+}
+.select-menu .options {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.select-menu.active .options {
+  display: none;
+}
+.options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+}
